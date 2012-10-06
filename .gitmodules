@@ -58,3 +58,6 @@
 [submodule "vim/bundle/nerdtree_plugin"]
 	path = vim/bundle/nerdtree_plugin
 	url = http://github.com/scrooloose/nerdtree.git
+[submodule "vim/bundle/snipmate"]
+	path = vim/bundle/snipmate
+	url = http://github.com/msanders/snipmate.vim.git
