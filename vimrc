@@ -134,3 +134,9 @@ nnoremap <leader>[ f,a<CR><ESC>
 nnoremap <leader>t :TagbarToggle<CR>
 " Select just-pasted text
 nnoremap gp `[v`]
+
+" map F4 key to listToggle
+nmap <F4> :TlistToggle<cr>
+let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
+" map F3 key to NERDTreeToggle
+nmap <F3> :NERDTreeToggle<cr>
