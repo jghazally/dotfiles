@@ -64,3 +64,6 @@
 [submodule "vim/bundle/taglist"]
 	path = vim/bundle/taglist
 	url = http://github.com/vim-scripts/taglist.vim.git
+[submodule "vim/bundle/phpfolding"]
+	path = vim/bundle/phpfolding
+	url = git://github.com/vim-scripts/phpfolding.vim.git
