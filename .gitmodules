@@ -46,21 +46,12 @@
 [submodule "vim/bundle/vim-eunuch"]
 	path = vim/bundle/vim-eunuch
 	url = git://github.com/tpope/vim-eunuch.git
-[submodule "vim/bundle/nerdtree_plugin"]
-	path = vim/bundle/nerdtree_plugin
-	url = http://github.com/scrooloose/nerdtree.git
 [submodule "vim/bundle/snipmate"]
 	path = vim/bundle/snipmate
 	url = http://github.com/jghazally/snipmate.vim.git
-[submodule "vim/bundle/taglist"]
-	path = vim/bundle/taglist
-	url = http://github.com/vim-scripts/taglist.vim.git
 [submodule "vim/bundle/nerdtree_plugin"]
 	path = vim/bundle/nerdtree_plugin
 	url = http://github.com/scrooloose/nerdtree.git
-[submodule "vim/bundle/snipmate"]
-	path = vim/bundle/snipmate
-	url = http://github.com/jghazally/snipmate.vim.git
 [submodule "vim/bundle/taglist"]
 	path = vim/bundle/taglist
 	url = http://github.com/vim-scripts/taglist.vim.git

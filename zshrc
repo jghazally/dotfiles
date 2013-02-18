@@ -19,12 +19,13 @@ setopt extended_glob
 autoload -U zmv
 
 alias lsl="ls -lah"
+alias wps="wp --path=wp/ $1"
 
 function webdev_mysql() {
   echo "Killing existing connection (sudo)..."
   sudo lsof -Pnl +M -i @127.0.0.1:3306 | awk '/[0-9]/ {print $2}' | xargs sudo kill
   echo "Opening new connection (ssh)..."
-  ssh -f -L 3306:localhost:3306 webdev.bigfish.co.uk -N
+  ssh -f -L 3306:localhost:3306 jeff@webdev.bigfish.co.uk -N
 }
 
 function scratch() {
@@ -51,7 +52,9 @@ function compile_compass() {
 	ls -d1 **/.sass-cache/../ | xargs -L1 compass compile --force -s compressed
 }
 
-alias lsl="ls -ahl"
+# make sure ctrl-s saves stuff in vim
+alias vim="stty stop '' -ixoff; vim"
+ttyctl -f
 
 fancy-ctrl-z () {
   if [[ $#BUFFER -eq 0 ]]; then
@@ -74,7 +77,7 @@ export LESS=' -RFX '
 
 [[ -s "$HOME/.z.sh" ]] && source "$HOME/.z.sh"
 
-export PATH=/Developer/usr/bin:~/.pythonbrew/bin:/opt/local/bin:/opt/local/sbin:/Users/SCM/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Developer/usr/bin:/Users/SCM/pear/bin:/usr/local/sbin:$HOME/.rvm.bin
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
+export PATH=/Developer/usr/bin:~/.pythonbrew/bin:/opt/local/bin:/opt/local/sbin:/Users/SCM/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Developer/usr/bin:/Users/SCM/pear/bin:/usr/local/sbin:$HOME/.rvm.bin
+PATH="/Applications/MAMP/bin/php/php5.3.6/bin/share/pear:/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php/php5.3.6/bin:/Users/SCM/.rvm/gems/ruby-1.9.3-p194/bin:$PATH"
