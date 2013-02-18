@@ -58,3 +58,9 @@
 [submodule "vim/bundle/phpfolding"]
 	path = vim/bundle/phpfolding
 	url = git://github.com/vim-scripts/phpfolding.vim.git
+[submodule "vim/bundle/vdebug"]
+	path = vim/bundle/vdebug
+	url = git://github.com/joonty/vdebug.git
+[submodule "vim/bundles/movar"]
+	path = vim/bundles/movar
+	url = git://github.com/robmiller/vim-movar.git
