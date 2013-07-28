@@ -5,6 +5,8 @@ ZSH_THEME="blinks"
 
 plugins=(osx ruby battery github sublime)
 
+ulimit -n 2048
+
 source $ZSH/oh-my-zsh.sh
 
 # Disable autocorrect for arguments, but enable it for commands.
@@ -21,13 +23,20 @@ autoload -U zmv
 alias lsl="ls -lah"
 alias wps="wp --path=wp/ $1"
 
-function webdev_mysql() {
-  echo "Killing existing connection (sudo)..."
-  sudo lsof -Pnl +M -i @127.0.0.1:3306 | awk '/[0-9]/ {print $2}' | xargs sudo kill
-  echo "Opening new connection (ssh)..."
-  ssh -f -L 3306:localhost:3306 jeff@webdev.bigfish.co.uk -N
+function console () {
+	if [[ $# > 0 ]]; then
+		query=$(echo "$*"|tr -s ' ' '|')
+		tail -f /var/log/system.log|grep -i --color=auto -E "$query"
+	else
+	tail -f /var/log/system.log
+	fi
 }
 
+function kill_port() {
+	if [[ $# > 0 ]]; then
+		lsof -P | grep ':'$1 | awk '{print $2}' | xargs kill -9 
+	fi
+}
 function scratch() {
 	if [ -f ~/Dropbox/Elements/Scratchpad.txt ]; then
 		vim ~/Dropbox/Elements/Scratchpad.txt
@@ -79,5 +88,5 @@ export LESS=' -RFX '
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
-export PATH=/Developer/usr/bin:~/.pythonbrew/bin:/opt/local/bin:/opt/local/sbin:/Users/SCM/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Developer/usr/bin:/Users/SCM/pear/bin:/usr/local/sbin:$HOME/.rvm.bin
+export PATH=/Developer/usr/bin:~/.pythonbrew/bin:/opt/local/bin:/opt/local/sbin:/Users/SCM/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Developer/usr/bin:/Users/SCM/pear/bin:/Users/SCM/bin:/usr/local/sbin:$HOME/.rvm.bin
 PATH="/Applications/MAMP/bin/php/php5.3.6/bin/share/pear:/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php/php5.3.6/bin:/Users/SCM/.rvm/gems/ruby-1.9.3-p194/bin:$PATH"
