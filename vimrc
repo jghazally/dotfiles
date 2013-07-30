@@ -161,3 +161,6 @@ endif
 if exists('+undofile')
 	set undofile
 endif
+set background=dark
+colorscheme solarized
+

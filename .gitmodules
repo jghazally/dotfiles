@@ -61,6 +61,9 @@
 [submodule "vim/bundle/vdebug"]
 	path = vim/bundle/vdebug
 	url = git://github.com/joonty/vdebug.git
-[submodule "vim/bundles/movar"]
-	path = vim/bundles/movar
+[submodule "vim/bundle/movar"]
+	path = vim/bundle/movar
 	url = git://github.com/robmiller/vim-movar.git
+[submodule "vim/bundle/ctrl-p"]
+	path = vim/bundle/ctrl-p
+	url = git://github.com/kien/ctrlp.vim.git
