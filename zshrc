@@ -87,7 +87,7 @@ export LESS=' -RFX '
 [[ -s "$HOME/.z.sh" ]] && source "$HOME/.z.sh"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-export PATH=/Developer/usr/bin:~/.pythonbrew/bin:/opt/local/bin:/opt/local/sbin:/Users/jghazally/bin:/Users/jghazally/dotfiles/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Developer/usr/bin:/Users/jghazally/pear/bin:/usr/local/sbin:$HOME/.rvm.bin
+export PATH=/Developer/usr/bin:~/.pythonbrew/bin:/opt/local/bin:/opt/local/sbin:/Users/SCM/bin:/Users/SCM/dotfiles/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Developer/usr/bin:/Users/SCM/pear/bin:/usr/local/sbin:$HOME/.rvm.bin
 PATH="/Applications/MAMP/bin/php/php5.3.6/bin/share/pear:/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php/php5.3.6/bin:/Users/jghazally/.rvm/gems/ruby-1.9.3-p194/bin:$PATH"
 
 PATH="/Applications/MAMP/bin/php/php5.3.6/bin/share/pear:/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php/php5.3.6/bin:/Users/SCM/.rvm/gems/ruby-1.9.3-p194/bin:$PATH"
