@@ -56,6 +56,14 @@ function sloc() {
 	grep -v '^$' **.(js|php) | grep -v '//' | wc -l
 }
 
+function delete_font() {
+	if [[ $# > 0 ]]; then
+		rm ../webfonts/$1.ttf;
+		rm ../webfonts/$1.eot;
+		rm ../webfonts/$1.woff;
+	fi
+}
+
 # Compile Compass, making a guess about what directory to compile in.
 function compile_compass() {
 	ls -d1 **/.sass-cache/../ | xargs -L1 compass compile --force -s compressed
