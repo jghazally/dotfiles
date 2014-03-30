@@ -144,23 +144,17 @@ nmap <F3> :NERDTreeToggle<cr>
 :nmap <c-s> :w<CR>
 :imap <c-s> <ESC>:w<CR>a
 :imap <c-s> <ESC><c-s>
-" A more sensible undofile structure, taken from Tim Pope's
-" sensible.vim
-let s:dir = has('win32') ? '~/Application Data/Vim' : has('mac') ? '~/Library/Vim' : '~/.local/share/vim'
-if isdirectory(expand(s:dir))
-	if &directory =~# '^\.,'
-		let &directory = expand(s:dir) . '/swap//,' . &directory
-	endif
-	if &backupdir =~# '^\.,'
-		let &backupdir = expand(s:dir) . '/backup//,' . &backupdir
-	endif
-	if exists('+undodir') && &undodir =~# '^\.\%(,\|$\)'
-		let &undodir = expand(s:dir) . '/undo//,' . &undodir
-	endif
+
+set undofile
+if has('win32') || has('win64')
+	set undodir=$HOME/vimfiles/undo
+else
+	set undodir=$HOME/.vim/undo
 endif
-if exists('+undofile')
-	set undofile
-endif
+
+set undolevels=1000
+set undoreload=10000
+
 set background=dark
 colorscheme solarized
 
