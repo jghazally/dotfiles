@@ -73,6 +73,3 @@
 [submodule "zsh-syntax-highlighting"]
 	path = zsh-syntax-highlighting
 	url = git://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule "vim/bundle/scss-lint"]
-	path = vim/bundle/scss-lint
-	url = https://github.com/alvinhuynh/Vim-plugin-for-SCSS-Lint.git
