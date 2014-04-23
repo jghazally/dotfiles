@@ -47,6 +47,9 @@ set relativenumber
 set backspace=indent,eol,start
 set laststatus=2
 
+" Add in syntastic scss linter
+let g:syntastic_scss_checkers = ['scss_lint']
+
 " Pathogen is the nicest way to load plugins
 call pathogen#infect()
 
@@ -151,6 +154,7 @@ if has('win32') || has('win64')
 else
 	set undodir=$HOME/.vim/undo
 endif
+
 
 set undolevels=1000
 set undoreload=10000

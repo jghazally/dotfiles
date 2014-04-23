@@ -80,6 +80,6 @@ PATH+=:$HOME/.rvm/gems/ruby-1.9.2-p320/bin:$HOME/.rvm/gems/ruby-1.9.3-p194/bin
 PATH+=:$HOME/.rvm/bin
 
 # Will begin moving there into better spot at somepoint~
-PATH+=:$HOME/bin:$HOME/dotfiles/
+PATH+=:$HOME/bin:$HOME/dotfiles
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
