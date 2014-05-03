@@ -57,11 +57,14 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
 
 
+# MAMP Madness (should really clean this up)
+export PATH=/Applications/MAMP/bin/php/php5.5.3/bin/pear:/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php/php5.5.3/bin:$PATH
+
 # Standard and System binaries
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+PATH+=:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin
 
 # XCode build tools
-PATH+=:/Developer/usr/bin
+PATH=/Developer/usr/bin:$PATH
 
 # Pythonbrew
 PATH+=:~/.pythonbrew/bin
@@ -71,9 +74,6 @@ PATH+=:/opt/local/bin:/opt/local/sbin
 
 # X11 ? Do I even use X11?
 PATH+=:/usr/X11/bin:$HOME/pear/bin
-
-# MAMP Madness (should really clean this up)
-PATH+=:/Applications/MAMP/bin/php/php5.3.6/bin/share/pear:/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php/php5.3.6/bin
 
 # rvm
 PATH+=:$HOME/.rvm/gems/ruby-1.9.2-p320/bin:$HOME/.rvm/gems/ruby-1.9.3-p194/bin
