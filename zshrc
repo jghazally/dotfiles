@@ -82,6 +82,9 @@ PATH+=:$HOME/.rvm/bin
 # Will begin moving there into better spot at somepoint~
 PATH+=:$HOME/bin:$HOME/dotfiles
 
+# Add in the command
+PATH+=:$HOME/bin/prox
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
