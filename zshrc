@@ -5,7 +5,7 @@ ZSH_THEME="blinks"
 
 plugins=(lol osx ruby battery github sublime)
 
-for file in ~/dotfiles/bash_{functions,aliases}; do
+for file in ~/dotfiles/bash_{functions,aliases,secrets}; do
 	[ -r "$file" ] && source "$file"
 done
 
