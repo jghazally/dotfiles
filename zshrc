@@ -3,7 +3,7 @@ ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="blinks"
 
-plugins=(lol osx ruby battery github sublime)
+plugins=(lol osx ruby battery github sublime history)
 
 for file in ~/dotfiles/bash_{functions,aliases,secrets}; do
 	[ -r "$file" ] && source "$file"
