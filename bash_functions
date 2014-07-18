@@ -12,6 +12,11 @@ function kill_port() {
 		lsof -P | grep ':'$1 | awk '{print $2}' | xargs kill -9 
 	fi
 }
+
+function ips() {
+	ifconfig | grep "inte " | awk '{ print $2 }'
+}
+
 function scratch() {
 	if [ -f ~/Dropbox/Elements/Scratchpad.txt ]; then
 		vim ~/Dropbox/Elements/Scratchpad.txt
@@ -28,7 +33,7 @@ function strip_trailing_whitespace() {
 
 # Count the significant lines of code in the current directory.
 function sloc() {
-	grep -v '^$' **.(js|php) | grep -v '//' | wc -l
+	grep -v '^$' **.(js|php|scss) | grep -v '//' | wc -l
 }
 
 function delete_font() {

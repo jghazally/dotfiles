@@ -154,7 +154,12 @@ if has('win32') || has('win64')
 else
 	set undodir=$HOME/.vim/undo
 endif
-
+" backup to ~/.tmp
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupskip=/tmp/*,/private/tmp/*
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set writebackup
 
 set undolevels=1000
 set undoreload=10000
