@@ -47,9 +47,6 @@ set relativenumber
 set backspace=indent,eol,start
 set laststatus=2
 
-" Add in syntastic scss linter
-let g:syntastic_scss_checkers = ['scss_lint']
-
 " Pathogen is the nicest way to load plugins
 call pathogen#infect()
 
