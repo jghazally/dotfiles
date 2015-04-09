@@ -49,3 +49,6 @@ function compile_compass() {
 	ls -d1 **/.sass-cache/../ | xargs -L1 compass compile --force -s compressed
 }
 
+function show_sites() {
+	cat ~/bin/prox/etc/sites.json
+}
