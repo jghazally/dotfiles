@@ -84,6 +84,7 @@ PATH+=:$HOME/bin:$HOME/dotfiles
 
 # Add in the command
 PATH+=:$HOME/bin/prox
+PATH+=:$HOME/bin/wp-cli/bin
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
