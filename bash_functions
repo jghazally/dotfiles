@@ -31,11 +31,6 @@ function strip_trailing_whitespace() {
 	sed -i '' -E "s/[[:space:]]*$//" **/*(.)
 }
 
-# Count the significant lines of code in the current directory.
-function sloc() {
-	grep -v '^$' **.(js|php|scss) | grep -v '//' | wc -l
-}
-
 function delete_font() {
 	if [[ $# > 0 ]]; then
 		rm ../webfonts/$1.ttf;

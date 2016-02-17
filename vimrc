@@ -49,6 +49,7 @@ set laststatus=2
 
 " Pathogen is the nicest way to load plugins
 call pathogen#infect()
+let g:syntastic_ruby_checkers=['rubocop','mri']
 
 " Always use Perl-style regular expressions
 nnoremap / /\v
