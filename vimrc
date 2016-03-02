@@ -57,7 +57,7 @@ vnoremap / /\v
 
 " Display invisibles
 set list
-set listchars=trail:·,precedes:«,extends:»,eol:¬,tab:▸\ 
+set listchars=trail:·,precedes:«,extends:»,eol:¬,tab:▸\
 
 " Folding
 " Start with all folds collapsed
@@ -91,8 +91,6 @@ set wrap
 set textwidth=72
 set formatoptions=qrn1
 
-" Set .md files to Markdown syntax
-au BufNewFile,BufRead *.md set filetype=markdown
 
 " Space in normal mode centres the screen on the current line
 nmap <space> zz
@@ -165,3 +163,12 @@ set undoreload=10000
 set background=dark
 colorscheme solarized
 
+au BufNewFile,BufRead *.j2 set syntax=jinja
+au BufNewFile,BufRead *.json set syntax=javascript
+" Set .md files to Markdown syntax
+au BufNewFile,BufRead *.md set filetype=markdown
+
+let g:session_directory = "~/.vim/tmp/session"
+let g:session_autoload = "yes"
+let g:session_autosave = "yes"
+let g:session_command_aliases = 1
