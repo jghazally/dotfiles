@@ -57,7 +57,7 @@ vnoremap / /\v
 
 " Display invisibles
 set list
-set listchars=trail:·,precedes:«,extends:»,eol:¬,tab:▸\
+set listchars=trail:·,precedes:«,extends:»,eol:¬,tab:▸\ 
 
 " Folding
 " Start with all folds collapsed
