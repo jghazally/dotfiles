@@ -58,7 +58,7 @@ ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
 
 
 # MAMP Madness (should really clean this up)
-export PATH=/Applications/MAMP/bin/php/php5.5.3/bin/pear:/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php/php5.5.3/bin:$PATH
+export PATH=/Applications/MAMP/bin/php/php5.6.10/bin/pear:/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php/php5.6.10/bin:$PATH
 
 # Standard and System binaries
 PATH+=:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin
@@ -83,7 +83,7 @@ PATH+=:$HOME/.rvm/bin
 PATH+=:$HOME/bin:$HOME/dotfiles
 
 # Add in the command
-PATH+=:$HOME/bin/prox
+PATH+=:$HOME/bin/scm
 PATH+=:$HOME/bin/wp-cli/bin
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
