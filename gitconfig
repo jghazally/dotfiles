@@ -1,8 +1,8 @@
 [user]
 	name = Jeffry Ghazally
-	email = jeffry@alphero.com
+	email = jeffry@gettimely.com
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/jeffryghazally/.gitignore
 	quotepath = false
 	pager = less -x4
 
@@ -92,3 +92,9 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Users/jeffryghazally/Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

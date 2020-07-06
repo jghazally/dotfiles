@@ -56,9 +56,15 @@ export LESS=' -RFX '
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
 
-
+PHP_VERSION=$(ls /Applications/MAMP/bin/php/ | sort -n | tail -1)
+export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH
 # MAMP Madness (should really clean this up)
-export PATH=/Applications/MAMP/bin/php/php5.6.10/bin/pear:/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php/php5.6.10/bin:$PATH
+#export PATH=/Applications/MAMP/bin/php/php5.6.10/bin/pear:/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php/php5.6.10/bin:$PATH
+#export PATH=/Applications/MAMP/bin/php/php7.0.8/bin/pear:/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php/php7.0.8/bin:$PATH
+
+# rvm
+PATH+=:$HOME/.rvm/gems/ruby-1.9.2-p320/bin:$HOME/.rvm/gems/ruby-1.9.3-p194/bin
+PATH+=:$HOME/.rvm/bin
 
 # Standard and System binaries
 PATH+=:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin
@@ -75,9 +81,6 @@ PATH+=:/opt/local/bin:/opt/local/sbin
 # X11 ? Do I even use X11?
 PATH+=:/usr/X11/bin:$HOME/pear/bin
 
-# rvm
-PATH+=:$HOME/.rvm/gems/ruby-1.9.2-p320/bin:$HOME/.rvm/gems/ruby-1.9.3-p194/bin
-PATH+=:$HOME/.rvm/bin
 
 # Will begin moving there into better spot at somepoint~
 PATH+=:$HOME/bin:$HOME/dotfiles
@@ -89,3 +92,7 @@ PATH+=:$HOME/bin/wp-cli/bin
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
